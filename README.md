@@ -100,7 +100,7 @@ REGLAS DE ACTUACIÓN:
 ### Justificación Técnica:
 
 1. **Control de Alucinaciones:** Exige la recuperación explícita de documentos antes de proporcionar constantes o fórmulas concretas de la asignatura.
-2. **Formato Científico Standard:** Asegura la legibilidad de expresiones matemáticas mediante notación `LaTeX` inline ($...$) o en bloque ($$...$$).
+2. **Formato Científico Standard:** Asegura la legibilidad de expresiones matemáticas mediante notación `LaTeX` inline (`$...$`) o en bloque (`$$...$$`).
 3. **Guardarraíles de Dominio:** Restringe las interacciones a la Física, rechazando amablemente peticiones fuera del ámbito de conocimiento.
 
 ---
