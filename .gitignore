@@ -1,0 +1,55 @@
+# ==========================================
+# Entorno Virtual y Gestor de paquetes (uv)
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+.uv/
+
+# ==========================================
+# Archivos de Configuración y Claves API
+# ==========================================
+.env
+.env.local
+*.pem
+*.key
+
+# ==========================================
+# Datos del Proyecto y Bases Vectoriales (RAG)
+# ==========================================
+material/
+chroma_db/
+chroma_db_fisica/
+chroma_db_fisica_api/
+chroma_db_fisica_HF/
+*.sqlite3
+
+# ==========================================
+# Caché y Archivos Temporales de Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Jupyter Notebooks
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# Configuración de IDEs y Editores
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# Archivos del Sistema Operativo
+# ==========================================
+.DS_Store
+Thumbs.db
