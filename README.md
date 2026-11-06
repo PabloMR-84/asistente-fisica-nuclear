@@ -11,7 +11,7 @@ El asistente está especializado en el dominio científico y académico de la **
 ### Características Clave:
 * **Ejecución Unificada:** El proyecto completo está integrado y documentado en un único cuaderno Jupyter ejecutable (`notebooks/agente_fisica.ipynb`).
 * **Estrategia Dual de Embeddings:** Permite alternar libremente entre embeddings en la nube (`models/gemini-embedding-2`, $3072$ dimensiones) y embeddings locales (`sentence-transformers/all-MiniLM-L6-v2`, $384$ dimensiones) para operar de forma independiente a la cuota de la API.
-* **Formalismo Matemático Riguroso:** Notación $\text{\LaTeX}$ formal obligatoria para magnitudes, constantes, relaciones cinemáticas y ecuaciones de desintegración (ej. $E=mc^2$, $\beta^-$, $^{235}_{92}\text{U}$).
+* **Formalismo Matemático Riguroso:** Notación `LaTeX` formal obligatoria para magnitudes, constantes, relaciones cinemáticas y ecuaciones de desintegración (ej. $E = mc^2$, $\beta^-$, $^{235}_{92}\text{U}$).
 * **RAG Condicional y Modular:** Lógica de herramientas desacoplada del *retriever* concreto (`buscar_apuntes_fisica` para teoría general y `buscar_formulas_y_ecuaciones` para expresiones matemáticas).
 * **Router de Complejidad Dinámico:** Clasificación inicial de la consulta (`nodo_clasificar`) para derivar la inferencia entre un modelo liviano (`gemini-3.5-flash-lite`) o uno avanzado (`gemini-3.5-flash`).
 * **Inspección y Guardarraíles de Salida:** Validador heurístico para detectar y corregir respuestas incompletas o cortadas antes de entregar el resultado al usuario.
@@ -98,8 +98,9 @@ REGLAS DE ACTUACIÓN:
 ```
 
 ### Justificación Técnica:
+
 1. **Control de Alucinaciones:** Exige la recuperación explícita de documentos antes de proporcionar constantes o fórmulas concretas de la asignatura.
-2. **Formato Científico Standard:** Asegura la legibilidad de expresiones matemáticas mediante notación $\text{\LaTeX}$ inline (`$...$`) o en bloque (`$$...$$`).
+2. **Formato Científico Standard:** Asegura la legibilidad de expresiones matemáticas mediante notación `LaTeX` inline ($...$) o en bloque ($$...$$).
 3. **Guardarraíles de Dominio:** Restringe las interacciones a la Física, rechazando amablemente peticiones fuera del ámbito de conocimiento.
 
 ---
@@ -126,14 +127,14 @@ El cuaderno incluye una batería de pruebas de 10 casos diseñados para validar 
 
 1. **Caso 1 (Consulta Conceptual General):** Diferenciación entre leptones y hadrones en el Modelo Estándar (Ruta Lite).
 2. **Caso 2 (Consulta Documental RAG):** Recuperación de los términos de la fórmula semiempírica de Bethe-Weizsäcker.
-3. **Caso 3 (Desarrollo Matemático Complejo):** Cinemática detallada de la desintegración $\beta^-$ en notación $\text{\LaTeX}$.
+3. **Caso 3 (Desarrollo Matemático Complejo):** Cinemática detallada de la desintegración $\beta^-$ en notación `LaTeX`.
 4. **Caso 4 (Ecuaciones Específicas):** Definición formal de la anchura de resonancia y distribución de Breit-Wigner.
 5. **Caso 5 (Modelo Físico Complejo):** Origen del término espín-órbita en el modelo de capas y operador $V_{so}(r)$.
 6. **Caso 6 (Memoria Conversacional Nivel 1):** Pregunta de seguimiento sobre el neutrino/antineutrino conservador de momento.
 7. **Caso 7 (Memoria Conversacional Nivel 2):** Explicación de la baja sección eficaz de interacción de dicha partícula.
 8. **Caso 8 (Guardarraíl de Dominio):** Rechazo educado ante consultas ajenas a la asignatura (ej. recetas de cocina).
 9. **Caso 9 (Guardarraíl contra Alucinaciones):** Verificación de límites ante datos no presentes en la documentación.
-10. **Caso 10 (Consulta Mixta Electrodébil):** Relación entre los bosones $W^0$, $B^0$ y el fotón a través del ángulo de Weinberg $\theta_W$.
+10. **Caso 10 (Consulta Mixta Electrodébil):** Relación entre los bosones $W^0, B^0$ y el fotón a través del ángulo de Weinberg $\theta_W$.
 
 ---
 
